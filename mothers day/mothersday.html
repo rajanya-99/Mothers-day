@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Mother's Day ❤️</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(to bottom,#fff0f5,#ffe4ec,#fff);
+      color:#333;
+      overflow-x:hidden;
+    }
+
+    /* Floating Hearts */
+
+  .heart{
+  position:fixed;
+  bottom:-20px;
+  color:rgba(255,105,180,0.5);
+  animation:float 8s linear infinite;
+  z-index:0;
+}
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    section{
+      padding:80px 10%;
+      position:relative;
+      z-index:1;
+    }
+
+    /* Hero Section */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      flex-direction:column;
+      position:relative;
+    }
+
+    .hero img{
+      width:280px;
+      height:280px;
+      border-radius:50%;
+      object-fit:cover;
+      border:8px solid white;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      margin-bottom:25px;
+      animation:fadeIn 2s ease;
+    }
+
+    .hero h1{
+      font-size:5rem;
+      font-family:'Great Vibes',cursive;
+      color:#d63384;
+    }
+
+    .hero p{
+      margin-top:20px;
+      font-size:1.2rem;
+      max-width:700px;
+      line-height:1.8;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* Section Title */
+
+    .section-title{
+      text-align:center;
+      font-size:3rem;
+      margin-bottom:50px;
+      color:#d63384;
+      font-family:'Great Vibes',cursive;
+    }
+
+    /* Personality Cards */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.03);
+      background:#ffd6e7;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#d63384;
+    }
+
+    /* Timeline */
+
+    .timeline{
+      position:relative;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:6px;
+      background:#ff8fb1;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-3px;
+    }
+
+    .container{
+      padding:20px 40px;
+      position:relative;
+      width:50%;
+    }
+
+    .container.left{
+      left:0;
+    }
+
+    .container.right{
+      left:50%;
+    }
+
+    .content{
+      padding:20px;
+      background:white;
+      position:relative;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.4s;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    /* Letter */
+
+    .letter{
+      background:white;
+      padding:50px;
+      border-radius:25px;
+      line-height:2;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      font-size:1.1rem;
+    }
+
+    .letter span{
+      color:#d63384;
+      font-weight:600;
+    }
+
+    /* Footer */
+
+    footer{
+      text-align:center;
+      padding:40px;
+      background:#ffd6e7;
+      font-size:1.2rem;
+    }
+
+    /* Music Button */
+
+    .music-btn{
+      position:fixed;
+      top:20px;
+      right:20px;
+      background:#d63384;
+      color:white;
+      border:none;
+      padding:15px 20px;
+      border-radius:50px;
+      cursor:pointer;
+      z-index:10;
+      font-size:1rem;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:3.5rem;
+      }
+
+      .timeline::after{
+        left:31px;
+      }
+
+      .container{
+        width:100%;
+        padding-left:70px;
+        padding-right:25px;
+      }
+
+      .container.right{
+        left:0;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Music -->
+  <audio id="music" loop>
+    <source src="mumma.mp3.mpeg" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+
+  <!-- Floating Hearts -->
+  <script>
+    for(let i=0;i<30;i++){
+      let heart=document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML='❤';
+      heart.style.left=Math.random()*100+'vw';
+      heart.style.fontSize=Math.random()*25+15+'px';
+      heart.style.animationDuration=(Math.random()*5+5)+'s';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <!-- Replace with your mom's image -->
+    <img src="mom.jpg" alt="Mom">
+
+    <h1>Happy Mother's Day ❤️</h1>
+
+    <p>
+      You are the heart of our family, the one who fills every day with love, strength, and warmth. No matter how hard life gets, your care and support always make everything feel better. Thank you for every sacrifice, every lesson, and every hug that made me who I am today.
+
+I’m truly lucky to have a mother like you. Wishing you endless happiness, good health, and all the love you deserve today and always.
+    </p>
+
+  </section>
+
+  <!-- PERSONALITY -->
+
+  <section>
+
+    <h2 class="section-title">Her Beautiful Personality</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>❤️ Caring</h3>
+        <p>
+          Mom, your caring nature is the reason our home feels so full of warmth and peace. You always put everyone else before yourself, making sure we are happy, safe, and loved no matter what. From the smallest things to the biggest sacrifices, your love shows in everything you do. Your kindness and gentle heart make every difficult moment easier, and I will always be grateful for the comfort and care you give so selflessly.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💪 Strong</h3>
+        <p>
+         You are the strongest person I know, Mom. No matter how many challenges life throws your way, you face them with courage, patience, and determination. Even during tough times, you continue to stand tall and support everyone around you with a smile. Your strength inspires me every day to never give up and to keep moving forward with confidence..
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✨ Inspirational</h3>
+        <p>
+          Mom, you inspire me more than words can explain. The way you handle responsibilities, care for others, and stay positive through every situation teaches me important lessons about life. Your wisdom, hard work, and dedication motivate me to become a better person every day. I admire your ability to spread love and encouragement wherever you go.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>😊 Beautiful Soul</h3>
+        <p>
+          You have the most beautiful soul, Mom. Your heart is filled with love, compassion, and endless kindness that touches everyone around you. Your smile brings comfort, your words bring hope, and your presence brings happiness. Beauty is not just about appearance—it’s about the goodness inside a person, and you are truly one of the most beautiful people I have ever known.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section>
+
+    <h2 class="section-title">Her Journey & Achievements</h2>
+
+    <div class="timeline">
+
+      <div class="container left">
+        <div class="content">
+          <h3>🌸 Built a Loving Family</h3>
+          <p>
+            Mom, you are truly the pillar of our family. It is because of your love, care, kindness, and endless sacrifices that this family stands strong and united. You hold everyone together with your warmth and selflessness, always putting our happiness before your own. Your presence brings comfort, strength, and peace to our lives. You deserve all the love, happiness, and beautiful things in the world for everything you do for us every single day.
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>💖 Endless Sacrifices</h3>
+          <p>
+            Mom, throughout my whole life, you have always stood by my side, even when nobody else believed in me. You never stopped trusting me, encouraging me, and fighting for me no matter how difficult things became. Through thousands of sacrifices, you always chose my happiness and supported me with unconditional love. Your faith in me gave me the strength to believe in myself, and I will always be grateful for everything you have done for me.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>🌟 Inspiration to Everyone</h3>
+          <p>
+            Mom, your journey is truly inspiring. From completing two master’s degrees to overcoming your self-doubt, you proved how strong and capable you are. You started working with determination and never gave up on yourself. Today, seeing you as the Principal of a school makes me so proud. Your hard work, courage, and dedication inspire me every single day. You taught me how to follow my heart and never give up.
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>🏆 Greatest Mom Ever</h3>
+          <p>
+           Mom, you are the definition of a truly great mother. Your love is unconditional, your care is endless, and your support never fades no matter what happens. You have always guided me with patience, protected me with strength, and loved me with your whole heart. I feel incredibly lucky and proud to have a mother like you.
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PHOTO GALLERY -->
+
+  <section>
+
+    <h2 class="section-title">Beautiful Memories</h2>
+
+    <div class="gallery">
+
+      <!-- Replace these with your own images -->
+
+      <img src="photo1.jpg" alt="">
+      <img src="photo2.jpg" alt="">
+      <img src="photo3.jpg" alt="">
+      <img src="photo4.jpg" alt="">
+      <img src="photo5.jpg" alt="">
+      <img src="photo6.jpg" alt="">
+      <img src="photo7.jpg" alt="">
+      <img src="photo8.jpg" alt="">
+      <img src="photo9.jpg" alt="">
+      <img src="photo10.jpg" alt="">
+      <img src="photo11.jpg" alt="">
+      <img src="photo12.jpg" alt="">
+      <img src="photo13.jpg" alt="">
+      <img src="photo14.jpg" alt="">
+      <img src="photo15.jpg" alt="">
+      <img src="photo16.jpg" alt="">
+
+    </div>
+
+  </section>
+
+  <!-- LETTER -->
+
+  <section>
+
+    <h2 class="section-title">A Letter To Mom</h2>
+
+    <div class="letter">
+
+      Dear Mom, ❤️
+      <br><br>
+
+      I honestly don’t think words will ever be enough to describe how much you mean to me, but today I want to try.
+      
+      You are not just my mother, you are my biggest blessing, my greatest support system, and the strongest person I know.
+       Everything good in me exists because of your love, your care, and the way you raised me.
+
+
+      <br><br>
+
+      Your journey in life has always inspired me so deeply.
+       From completing two master’s degrees to becoming the Principal of a school, you proved that strength, hard work, and determination can achieve anything. 
+       There may have been moments when you doubted yourself, but you never stopped moving forward.
+        You built yourself through courage and perseverance, and today so many people look up to you with respect and admiration — including me.
+
+      <br><br>
+
+      But beyond all your achievements, what makes you truly special is your heart. 
+      Throughout my entire life, you have always stood by my side. Even when nobody believed in me, you never stopped believing.
+       You defended me, supported me, encouraged me, and loved me unconditionally through every situation.
+        No matter how difficult life became, you always chose me and sacrificed so much for my happiness.
+         I can never thank you enough for all the silent sacrifices you made just to see me smile.
+
+      <br><br>
+ 
+      You are the pillar of our family. This home stands strong because of your love, kindness, patience, and warmth. You hold all of us together and make our lives brighter simply by being in it. Your presence brings comfort, peace, and strength in ways I cannot explain.
+
+      <br><br>
+      Mom, you are truly one of the most beautiful souls I have ever known. Not because of how you look, but because of the kindness in your heart, the love in your actions, and the goodness you spread everywhere you go. You are the definition of a great mother, a strong woman, and an incredible human being.
+
+      <br><br> 
+      I feel so lucky and proud to be your child. No matter where life takes me, I will always carry your love, your lessons, and your strength with me. You deserve all the happiness, love, success, and beautiful things in this world because you have spent your whole life giving those things to everyone else.
+      <br><br>
+      Thank you for being my mother, my protector, my inspiration, and my home. I love you more than words will ever be able to express.
+      <br><br>
+
+      <span>
+        Thank you for everything you do.
+        We love you more than words can ever express.
+      </span>
+
+      <br><br>
+
+      Happy Mother's Day, Mumma. 🌸
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    Made with ❤️ for the most wonderful mom in the world
+  </footer>
+
+  <!-- MUSIC SCRIPT -->
+
+  <script>
+
+    const music=document.getElementById("music");
+
+    function toggleMusic(){
+
+      if(music.paused){
+        music.play();
+      }
+      else{
+        music.pause();
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
